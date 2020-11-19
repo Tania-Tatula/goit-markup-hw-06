@@ -166,9 +166,11 @@ p {
     align-items: center;
     width: 30px;
     height: 30px;
+    padding: 0;
     border-radius: 50%;
     background-color: var(--title-page-color);
     border: 1px solid #000000;
+
     }
 
 .modal-botton-icon {
