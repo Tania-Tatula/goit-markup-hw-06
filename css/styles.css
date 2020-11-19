@@ -104,7 +104,7 @@ p {
     border-radius: 4px;
  }
 
- .btn-studia {
+  .btn-studia {
     position: relative;
     display: flex;
     margin: auto;
@@ -119,9 +119,23 @@ p {
     color: var(--title-page-color);
     background-color: var(--accent-color);
     border: none;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
 
- .f {
+ .btn-studia:hover,
+ .btn-studia:focus {
+    background-color: var(--title-page-color);
+    color: var(--accent-color);
+ }
+
+ .btn-studia:hover .footer-icon-svg,
+ .btn-studia:focus .footer-icon-svg {
+     fill: var(--accent-color);
+ }
+
+ .footer-btn-svg {
     position: absolute;
     left: 148px;
     top: 13px;
@@ -130,11 +144,14 @@ p {
 
  }
 
- .footer-btn-svg {
+ .footer-icon-svg {
     width: 24px;
     height: 24px;
 
     fill: var(--title-page-color);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .btn-portfolio {
