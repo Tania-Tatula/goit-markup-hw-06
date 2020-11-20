@@ -934,7 +934,6 @@ background-image: url(../images/antenna-1.svg);
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 10px 11px 10px 12px; */
     margin-bottom: 20px;
     padding-left: 12px;
 }
@@ -979,6 +978,9 @@ background-image: url(../images/antenna-1.svg);
 
 
 .checkbox {
+    /* appearance: none;
+    
+    position: absolute; */
     position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
@@ -1010,4 +1012,12 @@ background-image: url(../images/antenna-1.svg);
     background-image: url(../images/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
+}
+
+/* забираэмо стилызацыю автозаповнення */
+.form-input:-webkit-autofill:hover, 
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: inherit;
+    -webkit-box-shadow: 0 0 0px 1000px var(--title-page-color) inset;
 }
