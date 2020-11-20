@@ -206,9 +206,6 @@ p {
 
 
 .btn-form{
-    display: flex;
-    align-items: center;
-    text-align: center;
     padding-right: 55px;
     padding-left: 55px;
 
@@ -921,6 +918,7 @@ background-image: url(../images/antenna-1.svg);
 }
 
 .form-label {
+    display: block;
     margin-bottom: 4px;    
 }
 
@@ -933,8 +931,16 @@ background-image: url(../images/antenna-1.svg);
 }
 
 .form-checkbox {
-    padding: 10px 11px 10px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 11px 10px 12px; */
     margin-bottom: 20px;
+    padding-left: 12px;
+}
+
+.svg-position{
+    position: relative;
 }
 
 .form-icon{
@@ -952,6 +958,8 @@ background-image: url(../images/antenna-1.svg);
     
 }
 
+
+
 .form-icon-svg{
     fill: var(--title-text-color);
 
@@ -967,5 +975,39 @@ background-image: url(../images/antenna-1.svg);
 .form-input:focus,
 .form-texterea:focus {
     border-color: var(--accent-color);
-    
 } 
+
+
+.checkbox {
+    position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.lebel-checkbox {
+    display: inline-flex;
+    
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+
+    border: 2px solid rgba(33,33,33,1);
+    border-radius: 2px;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.checkbox:checked + .lebel-checkbox {
+    border-color: #2196F3;
+    background-color: var(--accent-color);
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+}
